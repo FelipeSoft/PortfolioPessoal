@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+
+:root{
+    --main-color: #121212; 
+    --tertiary-color: #2a8aff; 
+    --secondary-color: #010101;
+    --text-color: #f3f3f3; 
+
+    --font-light: 300;
+    --font-strong: 600;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--secondary-color);
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
+/*menu mobile*/
+
+.menu-mobile{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    transition: all ease 1s;
+    margin-left: 100vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu-mobile i{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px 0px 0px 20px;
+}
+
+.menu-mobile ul{
+    list-style: none;
+}
+
+.menu-mobile ul li{
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.menu-mobile ul li a{
+    font-size: 1.3rem;
+}
+
+.menu-mobile ul li a:hover{
+    color: var(--tertiary-color);
+}
+
+/*scroll-top button*/
+
+.button-scroll{
+    background: var(--tertiary-color);
+    height: 40px;
+    width: 40px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 2px 5px 5px var(--main-color);
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+.button-scroll:hover{
+    background-color: #1c82ff;
+}
+/*scrollbar*/
+
+::-webkit-scrollbar{
+    background-color: var(--main-color);
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--tertiary-color);
+}
+/*similar codes*/
+
+.sticky{
+    height: 80px;
+    background-color: var(--tertiary-color);
+}
+li,a,button,p{
+    color: var(--text-color);
+}
+span{
+    color: var(--tertiary-color);
+}
+
+footer, section{
+    height: max-content;
+    width: 100%;
+    padding: 0px 120px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding:20px 0px;
+}
+
+.title h4{
+    color: var(--tertiary-color);
+}
+.title h2{
+    color: var(--text-color);
+}
+
+.container-home button,
+header button,
+.container-sobre .buttons-sobre .btn-sobre-01 button{
+    background-color: var(--tertiary-color);
+    border: 2px solid var(--tertiary-color);
+    padding: 9px 18px;
+    font-weight: var(--font-strong);
+    transition: all ease 0.4s;
+    cursor: pointer;
+}
+
+
+header button:hover{
+    background-color: var(--secondary-color);
+    border: 2px solid var(--tertiary-color);
+    color: var(--tertiary-color);
+}
+
+#sobre,
+#habilidades, #projetos,
+#contato{
+    padding: 0px 120px;
+}
+/*header*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin: auto;
+    color: var(--text-color);
+    padding: 0px 25px;
+    transition: all ease 0.4s;
+    background-color: var(--secondary-color);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+.nav-links li a:hover{
+    color: var(--tertiary-color);
+    transition: all ease 0.4s;
+}
+
+/*home*/
+
+#home{
+    display: flex;
+    background-image: url('https://worldguardian.ca/storage/2020/09/online-alberta-basic-security-guard-training-abst-1280x720.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.container-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 99;
+    margin-top: 50px;
+}
+.container-home h1{
+    font-size: 2rem;
+    margin-top: 12px;
+    color:var(--text-color);
+    text-align: center;
+}
+
+.container-home p{
+    margin: 12px 0px 24px 0px;
+    text-align: center;
+}
+.container-home h4{
+    color:var(--tertiary-color);
+    text-align: center;
+}
+
+/*sobre*/
+.container-sobre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0px;
+}
+
+.container-sobre img{
+    border: 6px solid var(--tertiary-color);
+    margin-right: 40px;
+}
+.container-sobre .right-sobre p{
+    text-align: justify;
+}
+.container-sobre .right-sobre h4{
+    color: var(--tertiary-color);
+    padding-bottom: 5px;
+}
+.container-sobre .right-sobre h2{
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.container-sobre .buttons-sobre .btn-sobre-02 button{
+    background-color: var(--secondary-color);
+    border: 2px solid var(--tertiary-color);
+    padding: 9px 18px;
+    font-weight: var(--font-strong);
+    cursor: pointer;
+    color: var(--tertiary-color);
+}
+.informations{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px 0px;
+}
+/*habilidades*/
+
+.info-habilidades-01{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.info-habilidades-01 .inf-item-his{
+    margin-bottom: 10px;
+}
+.info-habilidades-01 .inf-item-his h5{
+    color: var(--text-color);
+    padding: 5px 0px;
+}
+
+.info-habilidades-01 .inf-item-his p:nth-child(1){
+    display: flex;
+    text-align: justify;
+    align-items: center ;
+}
+
+.info-habilidades-01 .inf-item-his p:nth-child(1) span{
+    height: 2px;
+    width: 100%;
+    background-color:var(--tertiary-color);
+    margin: 0px 10px;
+}
+
+.container-habilidades .right-habilidades .info-habilidades-02{
+    display: grid;
+    color: var(--text-color);
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 30px;
+}
+
+.container-habilidades .right-habilidades .info-habilidades-02 .inf-item-hab{
+    background-color: var(--main-color);
+    padding: 60px 30px;
+}
+
+.inf-item-hab{
+    transition: all ease 0.4s;
+}
+.item-hab-1:hover,
+.item-hab-2:hover,
+.item-hab-3:hover{
+    background-color: var(--tertiary-color);
+    transform: scale(1.08);
+}
+
+.container-habilidades .right-habilidades .info-habilidades-02 .inf-item-hab i{
+    font-size: 3rem;
+}
+
+.container-habilidades .right-habilidades .info-habilidades-02 .inf-item-hab h3{
+    padding: 10px 0px;
+}
+.info-habilidades-03 .container-bars{
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0px;
+}
+.bars-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bars-title p:first-child{
+    padding: 15px 0px;
+}
+.frac-bar-1{
+    width: 84%;
+    height: inherit;
+    background-color: var(--tertiary-color);
+}
+.frac-bar-2{
+    width: 77%;
+    height: inherit;
+    background-color: var(--tertiary-color);
+}
+.frac-bar-3{
+    width: 63%;
+    height: inherit;
+    background-color: var(--tertiary-color);
+}
+.frac-bar-4{
+    width: 61%;
+    height: inherit;
+    background-color: var(--tertiary-color);
+}
+.frac-bar-5{
+    width: 56%;
+    height: inherit;
+    background-color: var(--tertiary-color);
+}
+.bar{
+    width: 100%;
+    height: 5px;
+    background-color: var(--main-color);
+}
+.container-button-skills{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-more-skills button{
+    background-color: var(--tertiary-color);
+    border: 2px solid var(--tertiary-color);
+    padding: 9px 18px;
+    font-weight: var(--font-strong);
+    transition: all ease 0.4s;
+    cursor: pointer;
+}
+
+/*projetos*/
+
+.container-projetos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    grid-template-rows: repeat(3, 250px);
+    padding-bottom: 60px;
+}
+.item-projetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary-color);
+    padding-bottom: 40px;
+}
+
+#contato .title h4{
+    color: var(--text-color);
+}
+.container-contato{
+    display: flex;
+}
+.left-contato{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.left-contato, .right-contato{
+    flex: 1;
+}
+.text-contato i{
+    color: var(--text-color);
+    font-size: 4rem;
+}
+.text-contato p{
+    font-size: 2.7rem;
+}
+.container-form{
+    height: max-content;
+    width: 100%;
+    background-color: var(--text-color);
+    padding: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input, textarea{
+    outline: 0;
+    padding: 20px;
+}
+input{
+    height: 35px;
+    margin-bottom: 20px;
+}
+textarea{
+    margin-bottom: 40px;
+    resize: none;
+    height: 130px;
+}
+label{
+    padding: 5px 0px;
+}
+#submit{
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    border: 2px solid var(--tertiary-color);
+    padding: 9px 18px;
+}
+/*rodapé*/
+.social-medias{
+    display: flex;
+    flex-direction: column;
+}
+.social-medias i{
+    z-index: 99;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 10px 0px;
+}
+.link{
+    padding: 30px 0px;
+}
+.link ul{
+    list-style: none;
+}
+.link ul li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+
+footer h2{
+    color: var(--text-color);
+}
+/*responsividade*/
+
+#bars-menu{
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+@media(max-width: 1240px){
+    p{
+        font-size: 0.8rem;
+    }
+    .inf-item-his span, .inf-item-his h5{
+        font-size: 0.9rem;
+    }
+    .informations{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .info-habilidades-01{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .left-contato{
+        padding-right: 40px;
+        text-align: justify;
+    }
+    .nav-links, .btn-header button{
+        display: none;
+    }
+    #bars-menu{
+        display: flex;
+    }
+    #home, #projetos, #contato, #sobre, #habilidades{
+        padding: 0px 50px;
+    }
+    .left-contato p{
+        font-size: 1.7rem;
+    }
+    .container-contato{
+        padding-bottom: 50px;
+    }
+}
+@media(min-width: 1199px){
+    .nav-links, .btn-header button{
+        display: flex;
+    }
+    #bars-menu{
+        display: none;
+    }
+}
+@media(max-width: 960px){
+    .container-habilidades .right-habilidades .info-habilidades-02{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .item-hab-3{
+        grid-column: 1/3; 
+    }
+    .container-contato{
+        flex-direction: column;
+    }
+    .left-contato{
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    .social-medias{
+        flex-direction: row;
+    }
+    .circle{
+        margin: 40px 20px;
+    }
+    .container-sobre{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .button-scroll{
+        height: 28px;
+        width: 28px;
+    }
+    .button-scroll i {
+        font-size: 15px;
+    }
+}
+
+
+@media(max-width: 768px){
+    .container-habilidades .right-habilidades .info-habilidades-02{
+        display: flex;
+        flex-wrap: wrap;    
+    }
+}
+
+@media(max-width: 620px){
+    .info-habilidades-01{
+        grid-template-columns: 1fr;
+    }
+    .container-projetos{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 300px);
+    }
+    .link ul li{
+        display: block;
+        padding: 20px 0px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 480px){
+    #home, #sobre, #habilidades, #projetos, #contato{
+        padding: 0px 10px;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+    footer h2, footer p{
+        text-align: center;
+    }
+    .container-home h1{
+        font-size: 1.2rem;
+    }
+    .text-contato p{
+        font-size: 1.5rem;
+    }
+    header h1{
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
